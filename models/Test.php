@@ -4,8 +4,8 @@ namespace Models;
 
 use Tests;
 
-class Test {
-
+class Test
+{
     public static $instance;
 
     private $database;
@@ -23,7 +23,7 @@ class Test {
 
     /**
      * Run the application
-     * @param $config
+     * @param $config array
      */
     public function run($config) : void
     {

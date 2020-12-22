@@ -4,8 +4,8 @@ namespace Models;
 
 use Models\Exceptions\MissingParametersException;
 
-class App {
-
+class App
+{
     public static $instance;
 
     private $arguments;

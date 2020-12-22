@@ -16,8 +16,7 @@ class Crawler
     {
 //        $html = Request::getHtml();
 
-
-        //TODO: implement crawling logic here. I get too tired to implement it on a fancy way with wget (curl is blocked - didnt debugged it.)
+        //TODO: implement crawling logic here. I get too tired to implement it on a fancy way with wget (curl is blocked - didnt debug it.)
 
         //Mocking data:
         $postcode = new Estate();

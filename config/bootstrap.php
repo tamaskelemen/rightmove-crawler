@@ -10,6 +10,3 @@ spl_autoload_register(function ($className) {
         require_once $file;
     }
 });
-
-session_start();
-
