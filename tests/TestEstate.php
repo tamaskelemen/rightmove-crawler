@@ -8,6 +8,11 @@ class TestEstate
 {
     public function testSave()
     {
-        $estate = new Estate();
+        echo "Run test save ";
+    }
+
+    public function testDelete()
+    {
+        echo "Run test Delete";
     }
 }

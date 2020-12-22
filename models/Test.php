@@ -2,7 +2,7 @@
 
 namespace Models;
 
-use Models\Exceptions\MissingParametersException;
+use Tests;
 
 class Test {
 
@@ -48,10 +48,28 @@ class Test {
      */
     private function test() : void
     {
-        $files = [];
+        $files = $this->getTestFileList();
+
         foreach ($files as $file) {
 
+             $class = new \ReflectionClass("Tests\\".substr($file, 0, -4));
+
+             foreach ($class->getMethods() as $object) {
+                 $testObject = new $class->name;
+                 $testObject->{$object->name}();
+
+             }
+
         }
+    }
+
+    private function getTestFileList()
+    {
+        $files = scandir(__DIR__ . "/../tests");
+        array_shift($files);
+        array_shift($files);
+
+        return $files;
     }
 
     private static function getHelpText() : string
