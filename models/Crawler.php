@@ -14,7 +14,13 @@ class Crawler
 
     public function crawl()
     {
-        $html = Request::getHtml();
+//        $html = Request::getHtml();
+
+        $postcode = new PostCode();
+        $postcode->name = "London";
+        $postcode->date = "2020-12-22 12:00:00";
+
+        var_dump($postcode->save());
         //Get html page
         //Parse
         //find data: number of sold properties

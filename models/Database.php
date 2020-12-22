@@ -24,7 +24,7 @@ class Database
             $app = App::instance();
             $config = $app->getDatabase();
 
-            foreach ($config as $key => $value){
+            foreach ($config as $key => $value) {
                 $this->$key = $value;
             }
 
@@ -40,7 +40,7 @@ class Database
                 PDO::ATTR_EMULATE_PREPARES   => FALSE,
             );
 
-            $dsn = "{$this->host};dbname={$this->dbName};charset={$this->charset};";
+            $dsn = "{$this->host};dbname={$this->dbName};";
 
             $this->pdo = new PDO($dsn, $this->username, $this->password, $options);
         } catch (PDOException $e) {

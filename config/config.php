@@ -1,6 +1,6 @@
 <?php
 
-const DB_LOCAL_CONNECT = 'db-local.php';
+const DB_LOCAL_CONNECT = __DIR__ . "/db-local.php";
 
 $db = [];
 
