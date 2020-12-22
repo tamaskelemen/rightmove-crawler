@@ -103,4 +103,9 @@ class App {
             throw new \Exception("Not command line enviroment!");
         }
     }
+
+    public function getDatabase()
+    {
+        return $this->database;
+    }
 }

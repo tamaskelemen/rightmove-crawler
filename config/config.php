@@ -8,15 +8,16 @@ if (file_exists(DB_LOCAL_CONNECT)) {
     $db = include DB_LOCAL_CONNECT;
 }
 
-
-
 return [
     'siteName' => 'Crawler',
-   // 'viewPath' => __DIR__ . '/../views/',
-    'db' => $db
-//        ['host' => 'psql:host=psql',
-//            'dbName' => 'crawler',
-//            'username' => 'rubyapp',
-//            'password' => 'asdasd',
-//            'charset' => 'utf8',]
+    'db' => $db,
+    ];
+/*
+ * The db-local.php should return an array containg the db connect info like this:
+     ['host' => 'psql:host=psql',
+            'dbName' => 'database-name',
+            'username' => 'db-user-name',
+            'password' => 'db-password',
+            'charset' => 'utf8',]
 ];
+*/
