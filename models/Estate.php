@@ -2,19 +2,24 @@
 
 namespace Models;
 
-class PostCode extends BaseActiveRecord
+class Estate extends BaseActiveRecord
 {
     public $id;
-    public $postCode;
+    public $address;
+    public $type;
+    public $post_code;
     public $date;
+    public $price;
 
     protected static function getColumns()
     {
-        return [
-            'name',
+        return  [
+            'address',
+            'type',
+            'post_code',
             'date',
+            'price',
         ];
-
     }
 
     /**
@@ -22,9 +27,7 @@ class PostCode extends BaseActiveRecord
      */
     protected static function getTableName()
     {
-        return "post_codes";
+        return "estates";
     }
 
-
 }
-

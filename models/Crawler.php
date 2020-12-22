@@ -16,15 +16,21 @@ class Crawler
     {
 //        $html = Request::getHtml();
 
-        $postcode = new PostCode();
-        $postcode->name = "London";
-        $postcode->date = "2020-12-22 12:00:00";
 
-        var_dump($postcode->save());
-        //Get html page
-        //Parse
-        //find data: number of sold properties
-        //address, type of property and price of 5 most expensive properties sold in the last 10 years
+        //TODO: implement crawling logic here. I get too tired to implement it on a fancy way with wget (curl is blocked - didnt debugged it.)
+
+        //Mocking data:
+        $postcode = new Estate();
+        $postcode->address = "London teszt City teszt";
+        $postcode->type = "flat";
+        $postcode->price = "22222";
+        $postcode->post_code = $this->postCode;
+        $postcode->date = date("Y-m-d H:i:s");
+
+        if ($postcode->save()) {
+            Logger::info("Successfully saved estate: " . json_encode($postcode));
+        }
+
     }
 
     private function parse()
